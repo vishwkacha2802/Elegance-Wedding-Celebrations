@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 15%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 15%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 15%;
+    --primary: 320 45% 65%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 320 20% 95%;
+    --secondary-foreground: 320 45% 35%;
+    --muted: 320 10% 96%;
+    --muted-foreground: 0 0% 45%;
+    --accent: 330 85% 35%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 320 15% 90%;
+    --input: 320 15% 90%;
+    --ring: 320 45% 65%;
+    --radius: 0.5rem;
+    --chart-1: 320 45% 65%;
+    --chart-2: 320 35% 75%;
+    --chart-3: 320 25% 85%;
+    --chart-4: 320 15% 90%;
+    --chart-5: 320 10% 95%;
+    --mauve: 320 45% 65%;
+    --mauve-dark: 320 50% 45%;
+    --magenta: 330 85% 35%;
+    --blush: 320 30% 92%;
+    --cream: 40 30% 97%;
+    --rose: var(--mauve);
+    --gold: var(--magenta);
+    --gold-light: 320 35% 75%;
+    --champagne: var(--cream);
+    --cream-dark: 320 20% 95%;
+    --sidebar: 40 30% 97%;
+    --sidebar-foreground: 0 0% 15%;
+    --sidebar-primary: 320 45% 65%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 320 20% 95%;
+    --sidebar-accent-foreground: 320 45% 35%;
+    --sidebar-border: 320 15% 90%;
+    --sidebar-ring: 320 45% 65%;
+  }
+
+  .dark {
+    --background: 320 15% 8%;
+    --foreground: 320 10% 95%;
+    --card: 320 12% 12%;
+    --card-foreground: 320 10% 95%;
+    --popover: 320 12% 12%;
+    --popover-foreground: 320 10% 95%;
+    --primary: 320 50% 60%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 320 15% 18%;
+    --secondary-foreground: 320 20% 90%;
+    --muted: 320 10% 20%;
+    --muted-foreground: 320 10% 65%;
+    --accent: 330 80% 45%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 72.2% 50.6%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 320 10% 20%;
+    --input: 320 10% 22%;
+    --ring: 320 50% 60%;
+    --chart-1: 320 50% 60%;
+    --chart-2: 320 40% 70%;
+    --chart-3: 320 30% 80%;
+    --chart-4: 320 20% 85%;
+    --chart-5: 320 10% 90%;
+    --mauve: 320 50% 60%;
+    --mauve-dark: 320 55% 50%;
+    --magenta: 330 80% 45%;
+    --blush: 320 20% 20%;
+    --cream: 320 10% 15%;
+    --rose: var(--mauve);
+    --gold: var(--magenta);
+    --gold-light: 320 40% 65%;
+    --champagne: var(--cream);
+    --cream-dark: 320 12% 20%;
+    --sidebar: 320 12% 10%;
+    --sidebar-foreground: 320 10% 95%;
+    --sidebar-primary: 320 50% 60%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 320 15% 18%;
+    --sidebar-accent-foreground: 320 20% 90%;
+    --sidebar-border: 320 10% 20%;
+    --sidebar-ring: 320 50% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    min-height: 100vh;
+    width: 100%;
+    overflow-x: hidden;
+    font-family: "Inter Variable", "Inter", system-ui, sans-serif;
+  }
+
+  #root {
+    min-height: 100vh;
+    width: 100%;
+    overflow-x: clip;
+  }
+
+  img,
+  picture,
+  video,
+  canvas {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+
+  input,
+  textarea,
+  select,
+  button {
+    max-width: 100%;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  span,
+  a,
+  button,
+  label,
+  td,
+  th {
+    overflow-wrap: anywhere;
+  }
+
+  .font-serif,
+  .font-display {
+    font-family: "Playfair Display", Georgia, serif;
+  }
+
+  .font-script {
+    font-family: "Playfair Display", Georgia, serif;
+    font-style: italic;
+  }
+
+  button:not([disabled]),
+  [role="button"]:not([disabled]) {
+    cursor: pointer;
+  }
+}
+
+@layer utilities {
+  .text-mauve {
+    color: hsl(var(--mauve));
+  }
+
+  .bg-mauve {
+    background-color: hsl(var(--mauve));
+  }
+
+  .text-mauve-dark {
+    color: hsl(var(--mauve-dark));
+  }
+
+  .bg-mauve-dark {
+    background-color: hsl(var(--mauve-dark));
+  }
+
+  .text-magenta {
+    color: hsl(var(--magenta));
+  }
+
+  .bg-magenta {
+    background-color: hsl(var(--magenta));
+  }
+
+  .bg-blush {
+    background-color: hsl(var(--blush));
+  }
+
+  .bg-cream {
+    background-color: hsl(var(--cream));
+  }
+}
+
+.glass-card {
+  background: hsl(var(--background) / 0.72);
+  backdrop-filter: blur(14px);
+  border: 1px solid hsl(var(--mauve) / 0.2);
+  box-shadow: 0 22px 48px hsl(var(--mauve) / 0.12);
+}
+
+.water-gradient {
+  background: linear-gradient(
+    140deg,
+    hsl(var(--cream)) 0%,
+    hsl(var(--blush)) 45%,
+    hsl(var(--background)) 100%
+  );
+}
+
+.balloon-gradient {
+  background: linear-gradient(
+    135deg,
+    hsl(var(--mauve)) 0%,
+    hsl(var(--magenta)) 100%
+  );
+}
